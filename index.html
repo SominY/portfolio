@@ -30,6 +30,7 @@
 
     <!-- javascript -->
     <script src="src/main.js" defer></script>
+    
 </head>
 <body>
     <!-- Header -->
@@ -181,11 +182,42 @@
             </ul>
         </section>
         <!-- Contact -->
-        <section id="contact"></section>
+        <section id="contact">
+            <div id="playlist">
+                <!-- autoplay: 자동재생, mute: 음소거, loop: 반복재생 -->
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/XsUOu_c7yww?si=DofOfInfYCDoH4XA
+                &autoplay=1&loop=1&mute=1&playlist=XsUOu_c7yww" 
+                title="YouTube video player" frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+
+            <div id="contact_info">
+                <h4>Contact</h4>
+                <ul>
+                    <li><a href="mailto: wlfus0123@gmail.com">
+                        <i class="fas fa-envelope"></i>
+                    </a></li>
+                    <li><a href="https://allriver.tistory.com/" target="_blank">
+                        <i class="fa-brands fa-blogger"></i>
+                    </a></li>
+                    <li><a href="" target="_blank">
+                        <i class="fa-brands fa-github"></i>
+                    </a></li>
+                </ul>
+            </div>
+        </section>
         <!-- Arrow Up -->
-        <aside></aside>
+        <aside>
+            <!-- 스크린 리더가 의미 있는 정보를 읽어들일 수 있도록 title 설정 -->
+            <a href="#home" title="back to top">
+                <i class="fa-solid fa-arrow-up"></i>
+            </a>
+        </aside>
     </main>
     <!-- Footer -->
-    <footer></footer>
+    <footer>
+        <p>Copyright ⓒ Yang Somin. All rights reserved.</p>
+    </footer>
 </body>
 </html>
