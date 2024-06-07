@@ -3,8 +3,9 @@
   /* App Colors */
   --color-primary: var(--color-darkblue);
   --color-primary-variant: var(--color-pink);
-  --color-accent: var(--color-lightyellow);
-  --color-accent-variant: var(--color-lightgray);
+  --color-accent: var(--color-yellow);
+  --color-accent-variant: var(--color-blue);
+  --color-aceent-variant2: var(--color-lightblue);
   --color-text: var(--color-white);
 
   /* Colors */
@@ -12,8 +13,11 @@
   --color-pink: #FFA0EA;
   --color-darkblue: #212028;
   --color-lightyellow: #fffde7;
-  --color-lightgray: #eeeeee;
+  --color-lightgray: #eaeaea;
   --color-black: #050a13;
+  --color-yellow: #ffff00;
+  --color-blue: #2196f3;
+  --color-lightblue: #e3f2fd;
 }
 
 * {
@@ -75,4 +79,56 @@ a {
 
 .header__menu__item:hover {
     border-bottom: 5px solid var(--color-text);
+}
+
+/* Home */
+#home {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background-color: var(--color-primary);
+    color: var(--color-text);
+    padding: 5rem;
+}
+
+.home__avatar {
+    padding: 0;
+    width: 35%;
+    height: 35%;
+}
+
+.home__title{
+    font-size: 4rem;
+    margin-bottom: 1rem;
+}
+
+.home__title2 {
+    font-size: 3rem;
+    line-height: 4.5rem;
+    margin-bottom: 4rem;
+}
+
+.home__title2--strong {
+    color: var(--color-accent);
+}
+
+.home__title2--strong2 {
+    border-bottom: 6px solid var(--color-accent);
+    padding: 6px;
+}
+
+.home__contact {
+    padding: 8px 16px;
+    background-color: var(--color-accent-variant);
+    padding: 1rem 1rem;
+    border-radius: 5px;
+
+    color: var(--color-text);
+    font-weight: bold;
+}
+
+.home__contact:hover {
+    background-color: var(--color-aceent-variant2);
+    color: var(--color-primary);
 }
