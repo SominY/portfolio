@@ -1,0 +1,78 @@
+/* Global */
+:root {
+  /* App Colors */
+  --color-primary: var(--color-darkblue);
+  --color-primary-variant: var(--color-pink);
+  --color-accent: var(--color-lightyellow);
+  --color-accent-variant: var(--color-lightgray);
+  --color-text: var(--color-white);
+
+  /* Colors */
+  --color-white: #ffffff;
+  --color-pink: #FFA0EA;
+  --color-darkblue: #212028;
+  --color-lightyellow: #fffde7;
+  --color-lightgray: #eeeeee;
+  --color-black: #050a13;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'ubuntu', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+
+    margin: 0;
+}
+
+h1,h2,h3,h4,p,ul {
+    margin: 0;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: var(--color-text);
+}
+
+/* Header */
+.header {
+    background-color: var(--color-primary-variant);
+   
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    top: 0;
+    width: 100%;
+    padding: 1rem 2rem;
+
+}
+
+.header__logo__img {
+    width: 40%;
+    height: 40%;
+}
+
+.header__menu {
+    display: flex;
+    gap: 5px;
+}
+
+.header__menu__item {
+    padding: 8px;
+    margin: 0 16px;
+    font-size: x-large;
+    font-weight: 500;
+}
+
+.header__menu__item:hover {
+    border-bottom: 5px solid var(--color-text);
+}
