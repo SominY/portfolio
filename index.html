@@ -19,14 +19,17 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Hind:wght@300;400;500;600;700&display=swap" 
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap" rel="stylesheet">
 
     <!-- Font Awesome -->
     <script src="https://kit.fontawesome.com/9e435a7251.js" crossorigin="anonymous"></script>
 
     <!-- CSS -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="CSS/style.css">
 
     <!-- javascript -->
     <script src="src/main.js" defer></script>
@@ -34,17 +37,17 @@
 </head>
 <body>
     <!-- Header -->
-    <header>
-        <div>
-            <a href="#"><img src="images/donut.ico" alt="logo"></a>
+    <header class="header">
+        <div class="header__logo">
+            <a href="#"><img class="header__logo__img" src="images/donut.ico" alt="logo"></a>
         </div>
         <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#work">My Work</a></li>
-                <li><a href="#contact">Contact</a></li>
+            <ul class="header__menu">
+                <li><a class="header__menu__item" href="#home">Home</a></li>
+                <li><a class="header__menu__item" href="#about">About</a></li>
+                <li><a class="header__menu__item" href="#skills">Skills</a></li>
+                <li><a class="header__menu__item" href="#work">My Work</a></li>
+                <li><a class="header__menu__item" href="#contact">Contact</a></li>
             </ul>
         </nav>
     </header>
@@ -52,95 +55,144 @@
     <main>
         <!-- Home -->
         <section id="home">
-            <h1>Welcome to my portfolio!</h1>
-            <h1>I&#39;m Somin,</h1>
-            <h1>A junior frontend developer who is never afraid of challenges</h1>
-            <img src="images/astronaut.png" alt="astronaut_img">
-            <a href="#contact">Contact Me</a>
+            <div class="home__intro">
+                <h1 class="home__title">Welcome to my portfolio!</h1>
+                <h2 class="home__title2">I&#39;m 
+                    <strong class="home__title2--strong">Somin Yang</strong>
+                    , <br> <strong class="home__title2--strong2">A junior web developer</strong> 
+                    who is never afraid of challenges !</h2>
+                <a class="home__contact" href="#contact">Contact Me</a>
+            </div>
+            <img class="home__avatar" src="images/astronaut.png" alt="astronaut_img">
         </section>
         <!-- About -->
         <section id="about">
-            <h1>About</h1>
-            <img src="images/moon.png" alt="moon_img">
-            <p>
-                안녕하세요, 신입 프론트엔드 개발자 양소민입니다. <br>
-                "Turn your wounds into wisdom"이라는 말처럼, 저는 과거의 실패와 어려움을 배움의 기회로 삼아 성장해왔습니다.<br> 
+            <h1 class="title">About</h1>
+            <div class="introduce">
+                <img class="introduce__img" src="images/moon.png" alt="moon_img">
+                <p class="introduce__text">
+                <strong class="introduce__text--strong">"Turn your wounds into wisdom"</strong>이라는 말처럼 과거의 실패와 어려움을 배움의 기회로 삼아 성장해왔습니다. 
                 이러한 경험을 바탕으로 문제 해결 능력을 키우고, 더 나은 코드를 작성하기 위해 끊임없이 노력하고 있습니다.<br><br>
                 
-                이전에 간호사로 일하면서 환자뿐만 아니라 다양한 의료진과의 원활한 소통, 팀워크, 세밀한 관찰력 및 문제 해결 능력을 배웠습니다.<br> 
-                이러한 경험을 바탕으로, 개발자로서 다양한 팀원들과 프로젝트를 수행할 때 상대의 말을 경청하고 유연한 의사소통을 해 나가겠습니다.<br>
+                이전에 간호사로 근무하며 느낀 점은 <strong class="introduce__text--strong2">Teamwork의 가장 중요한 요소는 ‘원활한 소통’</strong> 이라 여겨왔습니다. 
+                소통이 잘 이루어졌을 때 비로소 팀원들 간의 신뢰감도 더욱 상승할 수 있었고, 
+                환자의 치료에도 긍정적인 결과를 이끌어낼 수 있다는 것을 몸소 체험하였기 때문입니다. <br><br>
+
+                이러한 경험을 되새겨 <strong class="introduce__text--strong">다양한 팀원들과 프로젝트를 수행할 때 상대의 말을 경청하고 유연한 의사소통을 해 나가는 웹 개발자가 되겠습니다. </strong>
                 또한, 실패를 두려워하지 않고 그 속에서 깨달음을 얻어 항상 더 나은 사람이 되기 위해 노력하겠습니다.
-            </p>
+                </p>
+            </div>
         </section>
         <!-- Skills -->
         <section id="skills">
-            <div id="frontend">
-                <h3>FRONT-END</h3>
+            <h1 class="title">Skills</h1>
+            <div class="skills">
+            <section class="skills__frontend">
+                <h3 class="skills__title">FRONT-END</h3>
                 <ul>
-                    <li>
-                        <div>HTML5/CSS3</div>
-                        <div>웹 표준을 준수하며 시멘틱 마크업과 반응형 디자인을 적용하여 다양한 디바이스에서 최적의 사용자 경험 제공할 수 있습니다.</div>
-                    </li>
-                    <li>
-                        <div>Javascript</div>
-                        <div>ECMAScript 표준에 따른 최신 문법과 비동기 처리(Promises, Async/Await)를 사용하여 코드를 작성합니다.</div>
-                    </li>
-                    <li>
-                        <div>React</div>
-                        <div>상태 관리(Redux, Context API)와 라우팅(React Router)을 통한 복잡한 애플리케이션 구조 관리를 할 수 있습니다.</div>
-                    </li>
-                </ul>
-            </div>
-
-            <div id="mobile">
-                <h3>Mobile</h3>
-                <ul>
-                    <li>
-                        <div>Kotlin</div>
-                        <div>Kotlin을 사용하여 기본적인 프로그래밍 구조와 기능, 
-                            예를 들어 변수 선언, 조건문, 반복문, 함수 및 클래스 정의 등을 수행할 수 있습니다. 
-                            또한, 기본적인 객체 지향 프로그래밍 개념과 Null 안전성 기능을 활용하여 안정적인 코드를 작성할 수 있습니다.
+                    <li class="bar">
+                        <div class="bar__metadata">
+                            <span>HTML5/CSS3</span><span>80%</span>
+                        </div>
+                        <div class="bar__bg">
+                            <div class="bar__value" style="width: 80%"></div>
                         </div>
                     </li>
-                    <li>
-                        <div>Android Studio</div>
-                        <div>Android Studio를 사용하여 안정적이고 효율적인 안드로이드 앱을 개발할 수 있으며,
-                             XML 레이아웃 디자인과 RecyclerView 등 다양한 UI 요소를 활용할 수 있습니다.
-                             또한, Retrofit을 통한 네트워킹, Room을 통한 데이터베이스 관리 작업이 가능합니다.</div>
+                    <li class="bar">
+                        <div class="bar__metadata">
+                            <span>JavaScript</span><span>80%</span>
+                        </div>
+                        <div class="bar__bg">
+                            <div class="bar__value" style="width: 80%"></div>
+                        </div>
+                    </li>
+                    <li class="bar">
+                        <div class="bar__metadata">
+                            <span>React</span><span>60%</span>
+                        </div>
+                        <div class="bar__bg">
+                            <div class="bar__value" style="width: 60%"></div>
+                        </div>
                     </li>
                 </ul>
-            </div>
-
-            <div id="backend">
-                <h3>BACK-END</h3>
+            </section>
+            
+            <section class="skills__backend">
+                <h3 class="skills__title">BACK-END</h3>
                 <ul>
-                    <li><span>JAVA</span><span>기본 문법 숙지</span></li>
-                    <li><span>PYTHON</span><span>기본 문법 숙지</span></li>
-                    <li><span>MySQL</span><span>기본 문법 숙지</span></li>
-                    <li><span>Spring Boot</span><span>기초단계</span></li>
+                    <li class="bar">
+                        <div class="bar__metadata">
+                            <span>JAVA</span><span>50%</span>
+                        </div>
+                        <div class="bar__bg">
+                            <div class="bar__value" style="width: 50%"></div>
+                        </div>
+                    </li>
+                    <li class="bar">
+                        <div class="bar__metadata">
+                            <span>Python</span><span>50%</span>
+                        </div>
+                        <div class="bar__bg">
+                            <div class="bar__value" style="width: 50%"></div>
+                        </div>
+                    </li>
+                    <li class="bar">
+                        <div class="bar__metadata">
+                            <span>MySQL</span><span>70%</span>
+                        </div>
+                        <div class="bar__bg">
+                            <div class="bar__value" style="width: 70%"></div>
+                        </div>
+                    </li>
+                    <li class="bar">
+                        <div class="bar__metadata">
+                            <span>Spring Boot</span><span>50%</span>
+                        </div>
+                        <div class="bar__bg">
+                            <div class="bar__value" style="width: 50%"></div>
+                        </div>
+                    </li>
                 </ul>
-            </div>
+            </section>
 
-            <div id="etc">
-                <h3>Etc</h3>
+            <section class="skills__mobile">
+                <h3 class="skills__title">Mobile</h3>
                 <ul>
+                    <li class="bar">
+                        <div class="bar__metadata">
+                            <span>Kotlin</span><span>50%</span>
+                        </div>
+                        <div class="bar__bg"><div class="bar__value" style="width: 50%"></div></div>
+                    </li>
+                    <li class="bar">
+                        <div class="bar__metadata">
+                            <span>Android Studio</span><span>50%</span>
+                        </div>
+                        <div class="bar__bg"><div class="bar__value" style="width: 50%"></div></div>
+                    </li>
+                </ul>
+            </section>
+
+            <section class="skills__tools">
+                <h3 class="skills__title">Tools</h3>
+                <ul class="tools__text">
                     <li>Visual Studio</li>
                     <li>IntelliJ</li>
                     <li>Figma</li>
                     <li>Github</li>
                 </ul>
-            </div>
-
+            </section>
+        </div>
         </section>
         <!-- Work -->
         <section id="work">
-            <h2>My Work</h2>
-            <p>projects</p>
-            <ul>
-                <li><a href="#" target="_blank">
-                    <img src="images/vanillajs.png" alt="바닐라 JS">
-                    <div>
-                        <h3>Project #1</h3>
+            <h1 class="title">My Work</h1>
+            <ul class="projects">
+                <li class="project">
+                    <a href="#" target="_blank">
+                    <img src="images/vanillajs.png" alt="바닐라 JS" class="project__img">
+                    <div class="project__metadata">
+                        <h3 class="project__title">Project #1</h3>
                         <ul>
                             <li>프로젝트 명 : 바닐라 자바스크립트</li>
                             <li>사용기술 <br>
@@ -149,30 +201,33 @@
                         </ul>
                     </div>
                 </a></li>
-                <li><a href="#" target="_blank">
-                    <img src="" alt="">
-                    <div>
-                        <h3>Project #2</h3>
+                <li class="project">
+                    <a href="#" target="_blank">
+                    <img src="images/vanillajs.png" alt="" class="project__img">
+                    <div class="project__metadata">
+                        <h3 class="project__title">Project #2</h3>
                         <ul>
                             <li>프로젝트 명 :</li>
                             <li>사용기술</li>
                         </ul>
                     </div>
                 </a></li>
-                <li><a href="#" target="_blank">
-                    <img src="" alt="">
-                    <div>
-                        <h3>Project #3</h3>
+                <li class="project">
+                    <a href="#" target="_blank">
+                    <img src="images/vanillajs.png" alt="" class="project__img">
+                    <div class="project__metadata">
+                        <h3 class="project__title">Project #3</h3>
                         <ul>
                             <li>프로젝트 명 :</li>
                             <li>사용기술</li>
                         </ul>
                     </div>
                 </a></li>
-                <li><a href="#" target="_blank">
-                    <img src="" alt="">
-                    <div>
-                        <h3>Project #4</h3>
+                <li class="project">
+                    <a href="#" target="_blank">
+                    <img src="images/vanillajs.png" alt="" class="project__img">
+                    <div class="project__metadata">
+                        <h3 class="project__title">Project #4</h3>
                         <ul>
                             <li>프로젝트 명 :</li>
                             <li>사용기술</li>
@@ -193,7 +248,7 @@
             </div>
 
             <div id="contact_info">
-                <h4>Contact</h4>
+                <h1 class="title">Contact</h1>
                 <ul>
                     <li><a href="mailto: wlfus0123@gmail.com">
                         <i class="fas fa-envelope"></i>
@@ -210,14 +265,14 @@
         <!-- Arrow Up -->
         <aside>
             <!-- 스크린 리더가 의미 있는 정보를 읽어들일 수 있도록 title 설정 -->
-            <a href="#home" title="back to top">
+            <a class="arrow-up" href="#home" title="back to top">
                 <i class="fa-solid fa-arrow-up"></i>
             </a>
         </aside>
     </main>
     <!-- Footer -->
-    <footer>
-        <p>Copyright ⓒ Yang Somin. All rights reserved.</p>
+    <footer id="footer">
+        <span class="copyright">Copyright ⓒ Yang Somin. All rights reserved.</span>
     </footer>
 </body>
 </html>

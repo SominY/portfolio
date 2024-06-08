@@ -260,7 +260,62 @@ main {
 }
 
 /* Work */
+.projects {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 1rem;
 
+    margin: 5rem;
+    margin-bottom: 10rem;
+}
+
+.project {
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.project__img {
+    width: 100%;
+  
+}
+
+.project__metadata {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--color-black);
+    opacity: 0;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    transition: all 250ms ease-in;
+    transform: translateY(-10px);
+}
+
+.project__metadata:hover{
+    opacity: 0.8;
+    transform: translateY(0);
+}
+
+.project__title::after {
+    content: '';
+    display: block;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+
+    width: 50%;
+    height: 2px;
+    margin: 0.5rem 0;
+    background-color: var(--color-blue2);
+}
 
 /* Arrow Up */
 .arrow-up {
