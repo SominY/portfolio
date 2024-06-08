@@ -317,6 +317,51 @@ main {
     background-color: var(--color-blue2);
 }
 
+/* Contact */
+
+#contact {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 0 5rem;
+    padding-bottom: 10rem;
+
+}
+
+.playlist {
+    position: relative;
+    margin-right: 5rem;
+}
+
+
+.contact__title {
+    font-size: 3rem;
+    color: var(--color-text);
+}
+
+.contact__title::after {
+    content: '';
+    display: block;
+    position: relative;
+
+    width: 80%;
+    height: 5px;
+    margin-top: 1rem;
+    margin-bottom: 3rem;
+    background-color: var(--color-blue2);
+}
+
+.contact__text {
+    color: var(--color-text);
+    margin-bottom: 1.5rem;
+    font-size: 1.3rem;
+}
+
+.contact__icon {
+    margin-right: 1rem;
+}
+
+
+
 /* Arrow Up */
 .arrow-up {
     font-size: 2.5rem;

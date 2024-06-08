@@ -238,28 +238,39 @@
         </section>
         <!-- Contact -->
         <section id="contact">
-            <div id="playlist">
+            <div class="playlist">
                 <!-- autoplay: 자동재생, mute: 음소거, loop: 반복재생 -->
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/XsUOu_c7yww?si=DofOfInfYCDoH4XA
+                <div class="playlist__box">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/XsUOu_c7yww?si=DofOfInfYCDoH4XA
                 &autoplay=1&loop=1&mute=1&playlist=XsUOu_c7yww" 
                 title="YouTube video player" frameborder="0" 
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
                 referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+                <!-- <img class="playlist__bg" src="images/playlist_bg.png" alt="배경이미지"> -->
+
             </div>
 
-            <div id="contact_info">
-                <h1 class="title">Contact</h1>
-                <ul>
-                    <li><a href="mailto: wlfus0123@gmail.com">
+            <div class="contact_info">
+                <h1 class="contact__title">Contact</h1>
+                <div class="contact__text">
+                    <span class="contact__icon">
                         <i class="fas fa-envelope"></i>
-                    </a></li>
-                    <li><a href="https://allriver.tistory.com/" target="_blank">
+                    </span>
+                    <span>wlfus0123@gmail.com</span>
+                </div>
+                <div class="contact__text">
+                    <span class="contact__icon">
                         <i class="fa-brands fa-blogger"></i>
-                    </a></li>
-                    <li><a href="" target="_blank">
+                    </span>
+                    <span><a href="https://allriver.tistory.com/" target="_blank">https://allriver.tistory.com/</a></span>
+                </div>
+                <div class="contact__text">
+                    <span class="contact__icon">
                         <i class="fa-brands fa-github"></i>
-                    </a></li>
-                </ul>
+                    </span>
+                    <span><a href="https://github.com/dashboard" target="_blank">https://github.com/dashboard</a></span>
+                </div>
             </div>
         </section>
         <!-- Arrow Up -->
