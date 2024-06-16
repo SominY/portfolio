@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- SEO -->
-    <title>Somin&#39;s Portfolio</title>
+    <title>Somin&#39;s Portfolio</title> 
     <meta name="description" content="Portfolio for junior software engineer Somin" />
     <meta name="author" content="Somin" />
     <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
@@ -32,8 +32,10 @@
     <link rel="stylesheet" href="CSS/style.css">
 
     <!-- javascript -->
-    <script src="src/main.js" defer></script>
-    
+    <script type="module" src="src/main.js" defer></script>
+    <script type="module" src="src/projects.js" defer></script>
+    <!-- 각 파일이 서로 개입하지 못하도록 module로 설정 -->
+
 </head>
 <body>
     <!-- Header -->
@@ -50,20 +52,25 @@
                 <li><a class="header__menu__item" href="#contact">Contact</a></li>
             </ul>
         </nav>
+        <button class="header__toggle" aria-label="navigation menu toggle">
+            <i class="fa-solid fa-bars"></i>
+        </button>
     </header>
     <!-- Main -->
     <main>
         <!-- Home -->
         <section id="home">
-            <div class="home__intro">
-                <h1 class="home__title">Welcome to my portfolio!</h1>
-                <h2 class="home__title2">I&#39;m 
-                    <strong class="home__title2--strong">Somin Yang</strong>
-                    , <br> <strong class="home__title2--strong2">A junior web developer</strong> 
-                    who is never afraid of challenges !</h2>
-                <a class="home__contact" href="#contact">Contact Me</a>
-            </div>
-            <img class="home__avatar" src="images/astronaut.png" alt="astronaut_img">
+            
+                <div class="home__intro">
+                    <h1 class="home__title">Welcome to my portfolio!</h1>
+                    <h2 class="home__title2">I&#39;m 
+                        <strong class="home__title2--strong">Somin Yang</strong>
+                        , <br> <strong class="home__title2--strong2">A junior software engineer</strong> 
+                        who is never afraid of challenges !</h2>
+                    <a class="home__contact" href="#contact">Contact Me</a>
+                </div>
+                <img class="home__avatar" src="images/astronaut.png" alt="astronaut_img">
+            
         </section>
         <!-- About -->
         <section id="about">
@@ -255,7 +262,7 @@
                     <span class="contact__icon">
                         <i class="fas fa-envelope"></i>
                     </span>
-                    <span>wlfus0123@gmail.com</span>
+                    <span><a href="mailto:wlfus0123@gmail.com">wlfus0123@gmail.com</a></span>
                 </div>
                 <div class="contact__text">
                     <span class="contact__icon">
@@ -273,10 +280,12 @@
         </section>
         <!-- Arrow Up -->
         <aside>
+
             <!-- 스크린 리더가 의미 있는 정보를 읽어들일 수 있도록 title 설정 -->
             <a class="arrow-up" href="#home" title="back to top">
                 <i class="fa-solid fa-arrow-up"></i>
             </a>
+
         </aside>
     </main>
     <!-- Footer -->
