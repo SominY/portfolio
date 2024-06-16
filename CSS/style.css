@@ -87,16 +87,30 @@ main {
     height: 40%;
 }
 
+.header__toggle {
+    display: none;
+    background-color: transparent;
+    border: none;
+    color: var(--color-white);
+    font-size: 2rem;
+    position: absolute;
+    top: 3rem;
+    right: 1.5rem;
+}
+
 .header__menu {
     display: flex;
     gap: 5px;
 }
 
 .header__menu__item {
+    display: block;
     padding: 8px;
     margin: 0 16px;
     font-size: 1.5rem;
     font-weight: 500;
+
+    border-bottom: 5px solid transparent;
 }
 
 .header__menu__item:hover {
@@ -414,11 +428,21 @@ main {
         align-items: start;
     }
 
+    .header__toggle {
+        display: block;
+    }
+
     .header__menu {
+        display: none;
+
         flex-direction: column;
         text-align: center;
         padding: 1rem 4rem;
         gap: 1.5rem;
+    }
+
+    .header__menu.open {
+        display: flex;
     }
 
     .header__nav {
@@ -433,6 +457,7 @@ main {
 
     .home__title {
         font-size: 2.5rem;
+        line-height: 4rem;
         margin-bottom: 0.5rem;
     }
 
@@ -506,6 +531,8 @@ main {
     position: fixed;
     bottom: 3rem;
     right: 2rem;
+
+    transition: opacity 300ms ease-in;
 }
 
 /* Footer */
