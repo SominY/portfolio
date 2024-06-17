@@ -28,12 +28,16 @@
     <!-- Font Awesome -->
     <script src="https://kit.fontawesome.com/9e435a7251.js" crossorigin="anonymous"></script>
 
+    <!-- Typeit -->
+    <script src="https://unpkg.com/typeit@8.7.1/dist/index.umd.js"></script>
+
     <!-- CSS -->
     <link rel="stylesheet" href="CSS/style.css">
 
     <!-- javascript -->
     <script type="module" src="src/main.js" defer></script>
-    <script type="module" src="src/projects.js" defer></script>
+    <script type="module" src="src/active_menu.js" defer></script>
+    <script type="module" src="src/type.js" defer></script>
     <!-- 각 파일이 서로 개입하지 못하도록 module로 설정 -->
 
 </head>
@@ -45,7 +49,7 @@
         </div>
         <nav class="header__nav">
             <ul class="header__menu">
-                <li><a class="header__menu__item" href="#home">Home</a></li>
+                <li><a class="header__menu__item active" href="#home">Home</a></li>
                 <li><a class="header__menu__item" href="#about">About</a></li>
                 <li><a class="header__menu__item" href="#skills">Skills</a></li>
                 <li><a class="header__menu__item" href="#work">My Work</a></li>
@@ -56,21 +60,20 @@
             <i class="fa-solid fa-bars"></i>
         </button>
     </header>
+
     <!-- Main -->
     <main>
         <!-- Home -->
         <section id="home">
-            
                 <div class="home__intro">
                     <h1 class="home__title">Welcome to my portfolio!</h1>
-                    <h2 class="home__title2">I&#39;m 
+                    <h2 class="home__title2" aria-label="I'm Somin Yang,">I&#39;m 
                         <strong class="home__title2--strong">Somin Yang</strong>
                         , <br> <strong class="home__title2--strong2">A junior software engineer</strong> 
                         who is never afraid of challenges !</h2>
                     <a class="home__contact" href="#contact">Contact Me</a>
                 </div>
                 <img class="home__avatar" src="images/astronaut.png" alt="astronaut_img">
-            
         </section>
         <!-- About -->
         <section id="about">
@@ -280,12 +283,10 @@
         </section>
         <!-- Arrow Up -->
         <aside>
-
             <!-- 스크린 리더가 의미 있는 정보를 읽어들일 수 있도록 title 설정 -->
             <a class="arrow-up" href="#home" title="back to top">
                 <i class="fa-solid fa-arrow-up"></i>
             </a>
-
         </aside>
     </main>
     <!-- Footer -->
