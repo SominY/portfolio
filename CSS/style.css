@@ -24,6 +24,9 @@
   --color-lightblue: #e3f2fd;
   --color-oceanblue: #4527a0;
   --color-darkblue: #212028;
+
+  /* divider */
+  --divider-bottom-wave: url('data:image/svg+xml;utf8,  <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none"> <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path> </svg>')
 }
 
 * {
@@ -71,7 +74,7 @@ main {
     top: 0;
     width: 100%;
     padding: 1rem 2rem;
-    position: sticky;
+    position: fixed;
     z-index: 2;
     transition: all 300ms ease;
 }
@@ -87,8 +90,8 @@ main {
 } 
 
 .header__logo__img {
-    width: 40%;
-    height: 40%;
+    width: 25%;
+    height: 25%;
 }
 
 .header__toggle {
@@ -98,7 +101,7 @@ main {
     color: var(--color-white);
     font-size: 2rem;
     position: absolute;
-    top: 3rem;
+    top: 2rem;
     right: 1.5rem;
 }
 
@@ -137,6 +140,7 @@ main {
 
     color: var(--color-text);
     padding: 5rem;
+    padding-top: 10rem;
 }
 
 .home__avatar {
@@ -181,6 +185,9 @@ main {
 }
 
 /* About */
+#about {
+    padding-top: 10rem;
+}
 
 .introduce {
     display: flex;
@@ -226,6 +233,10 @@ main {
 }
 
 /* Skills */
+#skills {
+    padding-top: 8rem;
+}
+
 .skills {
     display: flex;
     justify-content: space-evenly;
@@ -290,6 +301,10 @@ main {
 }
 
 /* Work */
+#work {
+    padding-top: 10rem;
+}
+
 .projects {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -353,7 +368,7 @@ main {
     display: flex;
     justify-content: space-evenly;
     padding-bottom: 10rem;
-
+    padding-top: 10rem;
 }
 
 .playlist {
@@ -541,7 +556,9 @@ main {
 
 /* Footer */
 #footer {
+    position: relative;
     width: 100%;
+    height: 200px;
     margin: 0;
     padding: 4rem;
 
@@ -550,5 +567,34 @@ main {
     font-size: 1.2rem;
     font-style: bold;
     text-align: center;
+}
+
+#footer::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: calc(135% + 1.3px);
+    height: 200px;
+    overflow: hidden;
+    line-height: 0;
+    background-color: var(--color-primary);
+    
+    mask: var(--divider-bottom-wave);
+    --webkit-mask: var(--divider-bottom-wave);
+}
+
+.copyright {
+    display: block;
+    margin-top: 4rem;
+    margin-left: 30rem;
+}
+
+/** For tablet devices **/
+@media (min-width: 768px) and (max-width: 1023px) {
+    .custom-shape-divider-bottom-1718629402 svg {
+        width: calc(116% + 1.3px);
+        height: 39px;
+    }
 }
 
