@@ -171,6 +171,7 @@ main {
     color: var(--color-text);
     padding: 5rem;
     padding-top: 12rem;
+    
 }
 
 @keyframes tiltAndReturn {

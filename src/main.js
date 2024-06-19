@@ -1,15 +1,22 @@
+'use strict';
+
 // Header에 페이지 아래로 스크롤시 투명 스타일링 적용
 const header = document.querySelector('.header');
+const headerImg = document.querySelector('.header__logo__img');
+const headerMenu = document.querySelector('.header__menu');
 const headerHeight = header.offsetHeight;
+
 document.addEventListener('scroll', () => {
     // 스크롤 되는 Y 좌표가 headerHeight보다 크다면 다른 스타일링!
-    console.log(window.scrollY);
     if(window.scrollY > headerHeight) {
         header.classList.add('header--transparent');
+        headerImg.classList.add('header__logo__img--transparent');
+        headerMenu.classList.add('header__menu--transparent');
     } else {
         header.classList.remove('header--transparent');
+        headerImg.classList.remove('header__logo__img--transparent');
+        headerMenu.classList.remove('header__menu--transparent');
     }
-
 });
 
 // Home 섹션을 아래로 스크롤시 투명하게 처리

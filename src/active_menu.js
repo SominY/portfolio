@@ -39,16 +39,11 @@ function observerCallback(entries) {
       entry.intersectionRatio >= 0.95;
   });
 
-  console.log(visibleSections);
-  console.log('무조건 라스트 섹션!!', selectLastOne);
-
   const navIndex = selectLastOne
     ? sectionIds.length - 1
     : findFirstIntersecting(visibleSections);
-  console.log(sectionIds[navIndex]);
 
   selectNavItem(navIndex);
-  
 }
 
 function findFirstIntersecting(intersections) {
