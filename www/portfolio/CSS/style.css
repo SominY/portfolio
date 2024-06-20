@@ -31,6 +31,7 @@
 
 * {
     box-sizing: border-box;
+    cursor: url('/path/to/images/cursor.png'), auto;
 }
 
 html {
@@ -665,7 +666,7 @@ main {
     overflow: hidden;
     line-height: 0;
     background-color: var(--color-primary);
-    
+
     mask: var(--divider-bottom-wave);
     --webkit-mask: var(--divider-bottom-wave);
 }
