@@ -1,34 +1,24 @@
-// 구현 계획
-// 1. 모든 섹션 요소들과 메뉴 아이템들을 가지고 온다.
-// 2. IntersectionObserver를 사용해서 모든 섹션들을 관찰해야 한다.
-// 3. 보여지는 섹션에 해당하는 메뉴 아이템을 활성화 시킨다.
-// 보여지는 섹션: 
-// - 다수의 섹션이 동시에 보여진다면 가장 첫번째 섹션을 선택
-// - 마지막 contact 섹션이 보여진다면, 그러면 가장 마지막 섹션을 선택
 
 const sectionIds = ['#home', '#about', '#skills', '#work', '#contact'];
-
 const sections = sectionIds.map((id) => document.querySelector(id));
-
 const navItems = sectionIds.map((id) =>
   document.querySelector(`[href="${id}"]`)
 );
 
-const visibleSections = sectionIds.map(() => false); //현재 보여지는 항목 체크
+const visibleSections = sectionIds.map(() => false); // 각 섹션의 가시 상태를 추적하기 위한 배열
+let activeNavItem = navItems[0]; // 현재 활성화된 내비게이션 항목을 저장
 
-let activeNavItem = navItems[0];
-
+// IntersectionObserver 설정
 const options = {
-    rootMargin: '-20% 0px 0px 0px',
-    threshold: [0, 0.98],
+    rootMargin: '-20% 0px 0px 0px', // 뷰포트와 타겟 요소 간의 마진
+    threshold: [0, 0.98], // 요소가 뷰포트에 얼마나 보이는지를 나타내는 값
 };
 
-const observer = new IntersectionObserver(observerCallback, options);
-
+const observer = new IntersectionObserver(observerCallback, options); // IntersectionObserver 인스턴스를 생성
 sections.forEach((section) => observer.observe(section));
 
-function observerCallback(entries) {
-  let selectLastOne;
+function observerCallback(entries) { // Observer 콜백 함수. 각 엔트리를 순회하며 가시 상태를 업데이트
+  let selectLastOne; // 마지막 섹션
 
   entries.forEach((entry) => {
     const index = sectionIds.indexOf(`#${entry.target.id}`);
@@ -39,6 +29,7 @@ function observerCallback(entries) {
       entry.intersectionRatio >= 0.95;
   });
 
+  // 뷰포트에 가장 먼저 보이는 섹션의 인덱스 또는 마지막 섹션의 인덱스
   const navIndex = selectLastOne
     ? sectionIds.length - 1
     : findFirstIntersecting(visibleSections);
