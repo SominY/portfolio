@@ -510,6 +510,7 @@ main {
 }
 
 @media  screen and (max-width:768px) {
+
     .section {
         padding: 3rem 2rem;
     }
@@ -553,15 +554,54 @@ main {
     }
 
     .home__title {
-        font-size: 2.5rem;
-        line-height: 4rem;
+        font-size: 2rem;
         margin-bottom: 0.5rem;
     }
 
     .home__title2 {
-        font-size: 2.5rem;
-        line-height: 4rem;
-        margin-bottom: 3rem;
+        font-size: 2rem;
+        line-height: 2.5rem;
+        margin-bottom: 2rem;
+    }
+
+    .home__title2--strong, .home__title2--strong2 {
+        font-size: 2rem;
+        line-height: 2.5rem;
+    }
+
+    .home__title2--strong2 {
+        padding: 3px;
+        border-bottom-width: 3px;
+    }
+
+    .home__contact {
+        font-size: 1rem;
+        padding: 0.5rem 1rem;
+    } .home__title {
+        font-size: 2rem;
+        line-height: 2.5rem; /* 줄간격 조정 */
+        margin-bottom: 0.5rem;
+    }
+
+    .home__title2 {
+        font-size: 1.5rem;
+        line-height: 2.5rem; /* 줄간격 조정 */
+        margin-bottom: 2rem;
+    }
+
+    .home__title2--strong, .home__title2--strong2 {
+        font-size: 1.5rem;
+        line-height: 2.5rem; /* 줄간격 조정 */
+    }
+
+    .home__title2--strong2 {
+        padding: 3px;
+        border-bottom-width: 3px;
+    }
+
+    .home__contact {
+        font-size: 1rem;
+        padding: 0.5rem 1rem;
     }
 
     .home__avatar {
@@ -593,6 +633,18 @@ main {
         grid-template-rows: repeat(1, 1fr);
     }
 
+    .project__metadata {
+        font-size: 0.8rem;
+        line-height: 1.1rem;
+    }
+
+    .project__title::after {
+        margin: 0.8rem 0;
+    }
+
+    .project__metadata .fa-brands, .project__metadata .fa-solid {
+        font-size: 1rem;
+    }
     
     /* Contact */
     #contact {
