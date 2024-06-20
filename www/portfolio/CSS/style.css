@@ -31,7 +31,6 @@
 
 * {
     box-sizing: border-box;
-    cursor: url('/path/to/images/cursor.png'), auto;
 }
 
 html {
