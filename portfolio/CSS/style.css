@@ -374,7 +374,9 @@ main {
 
 .project__img {
     width: 100%;
-    padding: 0;
+    height: 100%;
+    object-fit: cover; /* 이미지를 채우되 가로세로 비율을 유지하면서 잘라냄 */
+    object-position: center; /* 가운데 정렬 */
 }
 
 .project__metadata {
