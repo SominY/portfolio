@@ -3,6 +3,13 @@
 
 ### &nbsp;👾 &nbsp; 제작 기간 : 24.05.30 - 24.06.20
 ### &nbsp;👾 &nbsp; 사용 기술 : HTML/CSS + JavaScript
+<br><br>
+
+## 🚀 &nbsp; 구현화면
+<br>
+<div align="center">
+<img width="50%" alt="Home" src="https://github.com/SominY/portfolio/assets/154952345/31b1853c-2934-439a-b78e-786bd8ab4f8b">
+</div>
 
 <br><br>
 ## 🚀 &nbsp; HTML5
