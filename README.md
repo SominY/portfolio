@@ -3,6 +3,24 @@
 
 ### &nbsp;👾 &nbsp; 제작 기간 : 24.05.30 - 24.06.20
 ### &nbsp;👾 &nbsp; 사용 기술 : HTML/CSS + JavaScript
+<br><br>
+
+## 🚀 &nbsp; 구현화면
+<br>
+<p align="center">
+  <img width="45%" alt="Home" src="https://github.com/SominY/portfolio/assets/154952345/31b1853c-2934-439a-b78e-786bd8ab4f8b">
+  <img width="45%" alt="About" src="https://github.com/SominY/portfolio/assets/154952345/6c547be9-c17d-41e3-b196-69db4446ab5a">
+</p>
+<p align="center"> 
+  <img width="45%" alt="Skills" src="https://github.com/SominY/portfolio/assets/154952345/71574ba1-9c57-4f4a-8c42-dcb7b79fe9d1">
+  <img width="45%" alt="Work" src="https://github.com/SominY/portfolio/assets/154952345/afeec783-2d13-4cb3-aa75-57ff8c6f831b">
+</p>
+<p align="center"> 
+  <img width="45%" alt="Contact" src="https://github.com/SominY/portfolio/assets/154952345/bf5a557e-f074-48f7-9cba-402abe70c798">
+</p>
+
+
+
 
 <br><br>
 ## 🚀 &nbsp; HTML5
